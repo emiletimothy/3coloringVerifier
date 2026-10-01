@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "arithmetic": "integer dyadic outward rounding",
+  "bits": 120,
+  "source_sha256": "da6d089861bbc76cbc546b89edce05f13a116b6fab0b4ff54fbaad44a220083b",
+  "python": "3.14.5 (main, May 18 2026, 01:35:03) [Clang 14.0.3 (clang-1403.0.22.14.1)]",
+  "part": "all",
+  "parameters": {
+    "c_star": "250001/1000000",
+    "c_drift": [
+      "1/4",
+      "250001/1000000"
+    ],
+    "T": "53/25",
+    "initialization_margin_target": "1/5000000",
+    "drift_increment": "1/1000",
+    "drift_numerator_margin_target": "1/50000"
+  },
+  "initialization": {
+    "status": "PASS",
+    "visited_boxes": 16216,
+    "split_boxes": 8076,
+    "leaf_boxes": 8140,
+    "initial_boxes": 64,
+    "max_depth": 12,
+    "leaf_counts": {
+      "first_threshold": 148,
+      "infeasible": 20,
+      "second_threshold": 7972
+    },
+    "coverage_exact": true,
+    "leaf_sha256": "a208db1c13e8cf428b0dcc77d68656e32b3e291a484b81a1a68652e98911e7c3",
+    "minimum_certified_margins": {
+      "first_threshold": {
+        "exact": "28729444761233521184357759547789/1329227995784915872903807060280344576",
+        "approx": 2.161363201221822e-05
+      },
+      "second_threshold": {
+        "exact": "2648344167023025247131508557/10384593717069655257060992658440192",
+        "approx": 2.550262667156458e-07
+      }
+    },
+    "elapsed_seconds": 2.377
+  },
+  "drift": {
+    "status": "PASS",
+    "visited_boxes": 646,
+    "split_boxes": 291,
+    "leaf_boxes": 355,
+    "initial_boxes": 64,
+    "max_depth": 11,
+    "leaf_counts": {
+      "global": 28,
+      "infeasible": 15,
+      "tangent": 312
+    },
+    "coverage_exact": true,
+    "leaf_sha256": "cbfea7a693cc2985e158510fa4ce533abd03dc726da197538a54eda95588daee",
+    "minimum_certified_margins": {
+      "global": {
+        "exact": "1619346598451281817323568122969647/664613997892457936451903530140172288",
+        "approx": 0.0024365219564835444
+      },
+      "tangent": {
+        "exact": "18869474322590884283170705607147/664613997892457936451903530140172288",
+        "approx": 2.8391629400565496e-05
+      }
+    },
+    "elapsed_seconds": 0.048
+  }
+}

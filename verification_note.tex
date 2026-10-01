@@ -1,0 +1,19 @@
+% Insert near the end of the proof of Proposition 17.
+% Supply verify.py and its output alongside the manuscript.
+The accompanying Python verifier \texttt{verify.py} implements the
+interval calculations above with outward rounding on the grid
+$2^{-120}\mathbb Z$ using integer arithmetic.
+Starting from an $8\times8$ grid and bisecting unresolved boxes,
+the initialization check terminates with $8{,}140$ final boxes,
+of which $20$ are excluded by necessary feasibility constraints.
+The remaining boxes certify a first- or second-lift threshold
+margin greater than $2.55\times10^{-7}$ above $T$.
+The drift check terminates with $355$ final boxes, of which $15$
+are excluded by necessary feasibility constraints, and certifies
+$V(M(q,L,z)-L-1/1000)>2.83\times10^{-5}$ uniformly over
+the stated parameter domain.
+Both subdivisions cover their full initial rectangles and leave
+no unresolved boxes. The file \texttt{results.json} records the
+exact rational lower bounds and the verification counts.
+Floating-point calculations only propose rational dual witnesses;
+all acceptance and exclusion decisions use exact interval bounds.
